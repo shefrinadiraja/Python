@@ -41,5 +41,5 @@ def who_is_user(id):
     return data
 
 
-abc = input('Enter user_number_who_commend:: ')
+abc = input('Enter user_number_who_commend: ')
 who_is_user(abc)
