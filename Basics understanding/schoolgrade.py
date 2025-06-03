@@ -36,8 +36,8 @@ grades=[
     (student_ids[2], 'Science','A'),
     (student_ids[2], 'English','B')
 ]
-db_cur.executemany('''insert into grades(student_id,subject,grade) values (?,?,?)''', grades)
-db_connection.commit
-db_connection.close
+db_cur.executemany('''insert or ignore into grades(student_id,subject,grade) values (?,?,?)''', grades)
+db_connection.commit()
+db_connection.close()
 print('Data inserted sucessfully')
 
